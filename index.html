@@ -155,6 +155,7 @@
   <div class="lista" id="juegos">
     <h3>Juegos optimizados</h3>
     <div class="item" onclick="mostrarDescarga('GTA V', 'https://docs.google.com/document/d/1csXoRtvw1v5d70B9_CpGyaurss173Y9RphnOwGOIwD8/mobilebasic', 'https://gofile.io/d/5vJjhE')">GTA V</div>
+    <div class="item" onclick="mostrarDescarga('Project Zomboid', 'https://www.mediafire.com/file/hf0wy1ho6baz0f5', )">Project Zomboid Online Legacy V0.32</div>
     <div class="item" onclick="mostrarDescarga('GTA Vice City', 'https://www.mediafire.com/file/r0x4wcpf0tqiy7v', 'https://gofile.io/d/5sXbyy')">GTA Vice City</div>
  <div class="item" onclick="mostrarDescarga('Payday 2', '', 'https://gofile.io/payday2')">Payday 2</div>
 
@@ -163,7 +164,9 @@
   <!-- Lista de programas -->
   <div class="lista oculto" id="programas">
     <h3>Programas útiles</h3>
- <div class="item" onclick="mostrarDescarga('Vegas Pro 17', 'https://www.mediafire.com/file/tjb4sfcn73rqpag', '')">Vegas Pro 17</div>
+    <div class="item" onclick="mostrarDescarga('Adobe Photoshop 2022', 'https://www.mediafire.com/file/4mz72e83ymmzrgf', '')">Adobe Photoshop 2022</div>
+  <div class="item" onclick="mostrarDescarga('Adobe Premiere 2017CC', 'https://www.mediafire.com/file/g2typnpiw3il2a8', '')">Adobe Premiere 2017CC</div>
+    <div class="item" onclick="mostrarDescarga('Vegas Pro 17', 'https://www.mediafire.com/file/tjb4sfcn73rqpag', '')">Vegas Pro 17</div>
   </div>
 </div>
 
@@ -195,7 +198,7 @@
   function mostrarDescarga(nombre, linkMediafire, linkGofile) {
     document.getElementById("titulo-descarga").innerText = `Descargar: ${nombre}`;
 
-    // MediaFire visible solo si hay link
+
     if (linkMediafire && linkMediafire.trim() !== "") {
       document.getElementById("btn-mediafire").style.display = "inline-block";
       document.getElementById("btn-mediafire").onclick = () => window.open(linkMediafire, '_blank');
@@ -203,7 +206,7 @@
       document.getElementById("btn-mediafire").style.display = "none";
     }
 
-    // GoFile visible solo si hay link
+
     if (linkGofile && linkGofile.trim() !== "") {
       document.getElementById("btn-gofile").style.display = "inline-block";
       document.getElementById("btn-gofile").onclick = () => window.open(linkGofile, '_blank');
